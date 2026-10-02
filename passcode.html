@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Cryptographic Password Strength Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Password Strength & Entropy Analyzer</h2>
+    <div class="subtitle">Academic InfoSecurity Assessment Module</div>
+
+    <div class="input-group">
+        <label for="password">Target Password</label>
+        <div class="input-wrapper">
+            <input type="password" id="password" placeholder="Enter password to analyze..." autofocus autocomplete="off">
+            <button type="button" class="toggle-btn" id="togglePassword">SHOW</button>
+        </div>
+    </div>
+
+    <div class="meter-container">
+        <div class="strength-bar-bg">
+            <div class="strength-bar-fill" id="strengthBar"></div>
+        </div>
+    </div>
+
+    <div class="status-banner" id="statusBanner">Awaiting Input...</div>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-title">Shannon Entropy</div>
+            <div class="metric-value" id="entropyVal">0.00 bits</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-title">Est. Crack Time</div>
+            <div class="metric-value" id="crackTimeVal">-</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-title">Character Pool (R)</div>
+            <div class="metric-value" id="poolVal">0 chars</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-title">Total Length</div>
+            <div class="metric-value" id="lengthVal">0 chars</div>
+        </div>
+    </div>
+
+    <ul class="checklist">
+        <li id="reqLength"><span>•</span> Min 8 Characters</li>
+        <li id="reqUpper"><span>•</span> Uppercase (A-Z)</li>
+        <li id="reqLower"><span>•</span> Lowercase (a-z)</li>
+        <li id="reqNumber"><span>•</span> Numerals (0-9)</li>
+        <li id="reqSymbol"><span>•</span> Special Symbols</li>
+        <li id="reqOptimal"><span>•</span> Optimal Length (12+)</li>
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
